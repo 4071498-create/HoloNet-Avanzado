@@ -29,5 +29,10 @@ public class HoloNetControl {
             return session.createQuery(hql, Nave.class).getResultList();
         }
     }
-    
+    public List<Object[]> obtenerReportePlanetasAsignados(){
+        try (Session session = sf.openSession()){
+            String hql = "SELECT n.nombre p.nombre FROM Nave n LEFT JOIN n.planetaOrigen p";
+            return session.createQuery(hql, Object[].class).getResultList();
+        }
+    }
 }
