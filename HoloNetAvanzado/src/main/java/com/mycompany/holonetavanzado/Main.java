@@ -9,6 +9,7 @@ import java.util.List;
  * @author aleja
  */
 public class Main {
+    
     public static void main(String[] args) {
         // Instanciamos el controlador que contiene los métodos HQL
         HoloNetControl control = new HoloNetControl();
